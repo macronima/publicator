@@ -1,0 +1,21 @@
+group 'ru.innopolis'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+  // testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile 'org.springframework:spring-core:4.3.4.RELEASE'
+  //  compile 'org.springframework:spring-web:4.3.4.RELEASE'
+    compile 'org.springframework:spring-webmvc:4.3.4.RELEASE'
+    compile 'org.projectlombok:lombok:1.16.10'
+   compile 'com.h2database:h2:1.4.192'
+   // compile  group: "com.h2database", name: "h2", version: "1.4.192"
+}
