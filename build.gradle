@@ -12,10 +12,17 @@ repositories {
 
 dependencies {
   // testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'org.springframework:spring-core:4.3.4.RELEASE'
-  //  compile 'org.springframework:spring-web:4.3.4.RELEASE'
     compile 'org.springframework:spring-webmvc:4.3.4.RELEASE'
     compile 'org.projectlombok:lombok:1.16.10'
    compile 'com.h2database:h2:1.4.192'
-   // compile  group: "com.h2database", name: "h2", version: "1.4.192"
+    compile 'javax.persistence:persistence-api:1.0.2'
+    compile 'org.springframework.security:spring-security-core:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-config:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-web:4.2.0.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:4.2.0.RELEASE'
+ //   compile group: 'org.apache.hadoop', name: 'hadoop-mapreduce-client-core', version: '2.7.3'
+ //   compile 'javax.servlet:servlet-api:2.5'
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+    compile 'jstl:jstl:1.2'
+    compile 'org.apache.taglibs:taglibs-standard-jstlel:1.2.5'
 }

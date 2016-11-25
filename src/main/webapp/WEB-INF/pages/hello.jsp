@@ -5,5 +5,7 @@
   </head>
   <body>
   $END$
+  <h1>Message : ${message}</h1>
+  <div>Get <a href="protected">protected</a> resource for admin.</div>
   </body>
 </html>
