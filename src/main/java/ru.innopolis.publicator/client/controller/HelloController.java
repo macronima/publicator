@@ -19,10 +19,9 @@ public class HelloController {
     @RequestMapping(value = "/protected**", method = RequestMethod.GET)
     public ModelAndView protectedPage() {
 
-        ModelAndView model = new ModelAndView();
+        ModelAndView model = new ModelAndView("protected");
         model.addObject("title", "Spring Security");
         model.addObject("message", "This is protected page - Only for Admin Users!");
-        model.setViewName("protected");
         return model;
 
     }
