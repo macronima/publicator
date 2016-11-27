@@ -6,6 +6,7 @@
   <body>
   $END$
   <h1>Message : ${message}</h1>
+  <div><a href="register">Create account</a></div>
   <div>Get <a href="protected">protected</a> resource for admin.</div>
   </body>
 </html>

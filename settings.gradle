@@ -1,2 +1,5 @@
 rootProject.name = 'publicator'
 
+include ':common:war'
+include ':server:war'
+include ':web:war'

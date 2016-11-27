@@ -3,6 +3,8 @@ package ru.innopolis.publicator.client.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.remoting.rmi.RmiProxyFactoryBean;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
@@ -13,6 +15,15 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan("ru.innopolis.publicator.client")
 public class WebConfig extends WebMvcConfigurerAdapter {
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        RmiProxyFactoryBean rmiProxyFactoryBean = new RmiProxyFactoryBean();
+        rmiProxyFactoryBean.setServiceUrl("rmi://localhost:5000/UserDetailsService");
+        rmiProxyFactoryBean.setServiceInterface(UserDetailsService.class);
+        rmiProxyFactoryBean.afterPropertiesSet();
+        return (UserDetailsService) rmiProxyFactoryBean.getObject();
+    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

@@ -18,6 +18,6 @@
     <a href="${logoutUrl}">Log Out</a>
     </c:if>
 </h2>
-<div>Get <a href="protected">protected</a> resource for admin.</div>
+<div>Post<a href="protected">protected</a> resource for admin.</div>
 </body>
 </html>
